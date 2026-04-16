@@ -52,20 +52,6 @@
         }
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
 
-        /* --- Terminal Cairos (Protocolo Jurídico) --- */
-        .cairos-terminal {
-            background: var(--terminal-bg);
-            border-radius: 12px;
-            padding: 20px;
-            color: #58a6ff;
-            font-family: 'Fira Code', monospace;
-            font-size: 0.85rem;
-            max-width: 520px;
-            margin: 25px 0;
-            border-left: 4px solid var(--law-accent);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
         /* --- Categorias Jurídicas --- */
         .category-pill {
             white-space: nowrap;
@@ -154,10 +140,6 @@
                     <h1 class="display-4 fw-bold mb-4">Excelência em <br><span class="text-primary">Conteúdo Jurídico.</span></h1>
                     <p class="lead mb-4 opacity-75">Materiais de apoio para graduação e concursos. Resumos estratégicos, flashcards de lei seca e slides didáticos com a curadoria RamosEstudos.</p>
                     
-                    <div class="cairos-terminal" data-aos="fade-up" data-aos-delay="300">
-                        <span id="cairos-logic"></span><span class="cursor">|</span>
-                    </div>
-
                     <div class="mt-4">
                         <a href="#materiais" class="btn btn-primary btn-lg px-5 rounded-0 shadow">Ver Materiais</a>
                     </div>
@@ -262,18 +244,6 @@
 
     <script>
         AOS.init({ duration: 1000, once: true });
-
-        // Terminal Cairos - Contexto Jurídico
-        const text = "Cairos_Law_Engine: Verificando autenticidade digital... Pronto para emissão de licença de download para RamosEstudos.";
-        let i = 0;
-        function type() {
-            if (i < text.length) {
-                document.getElementById('cairos-logic').innerHTML += text.charAt(i);
-                i++;
-                setTimeout(type, 40);
-            }
-        }
-        window.onload = type;
 
         // Simulação de Checkout Jurídico
         function checkout(item) {
